@@ -1,3 +1,5 @@
+import { StarknetAgentInterface } from "src/lib/agent/tools/tools";
+
 interface Account {
   agent: StarknetAgentInterface;
   publicAddress: string;
