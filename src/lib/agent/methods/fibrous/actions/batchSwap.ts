@@ -154,12 +154,12 @@ export class BatchSwapService {
 export const createSwapService = (
   agent: StarknetAgentInterface,
   walletAddress?: string
-): SwapService => {
+): BatchSwapService => {
   if (!walletAddress) {
     throw new Error('Wallet address not configured');
   }
 
-  return new SwapService(agent, walletAddress, new FibrousRouter());
+  return new BatchSwapService(agent, walletAddress, new FibrousRouter());
 };
 
 export const swapTokens = async (
@@ -185,3 +185,5 @@ export const swapTokens = async (
     });
   }
 };
+
+
